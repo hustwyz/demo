@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/Users/WangYunzhen/SecretLisa/workspace/Demo/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="/Users/WangYunzhen/SecretLisa/workspace/Demo/app/build/intermediates/pre-dexed/debug/classes-d731db51eb0dd5689e5e5e6ed6c26a537563a4aa.jar" />
-    </item>
-    <item
-        jar="/Users/WangYunzhen/SecretLisa/workspace/Demo/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="/Users/WangYunzhen/SecretLisa/workspace/Demo/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-f0ee5e6aeac875d5fada6dc522e32237ff24fbbe.jar" />
-    </item>
-    <item
-        jar="/Users/WangYunzhen/SecretLisa/workspace/Demo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="/Users/WangYunzhen/SecretLisa/workspace/Demo/app/build/intermediates/pre-dexed/debug/classes-134f7088aa0a35687b828a9394c0f05627e90835.jar" />
-    </item>
-    <item
-        jar="/Users/WangYunzhen/android/adt-bundle-mac-x86_64-20131030/sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
+        jar="E:\adnroid-sdk-4.3-eclipse\adt-bundle-windows-x86-20130729\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="/Users/WangYunzhen/SecretLisa/workspace/Demo/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-2a9757b067f4907649e15a840102011cb059164b.jar" />
+        <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-213d87afb8201c96d49e96ed54268e1a30b58167.jar" />
+    </item>
+    <item
+        jar="D:\Github\demo\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\classes-73b2dcab0208a2a05bace46bdd592e76922d3313.jar" />
+    </item>
+    <item
+        jar="D:\Github\demo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\classes-0530711c5f8e26a7cb886a9a15cd7cac5bc25292.jar" />
+    </item>
+    <item
+        jar="D:\Github\demo\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-b33bdeb6c574a4f59533fd1f4137bbb8d81abc4b.jar" />
     </item>
 
 </items>
