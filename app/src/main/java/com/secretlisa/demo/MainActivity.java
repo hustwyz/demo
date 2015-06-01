@@ -28,7 +28,7 @@ public class  MainActivity  extends    FragmentActivity implements View.OnClickL
     private List<Boolean> imageViewIsChoseList;
     private List<ImageView> imageViewList;
 
-
+//----------------------------
 
 
     @Override
