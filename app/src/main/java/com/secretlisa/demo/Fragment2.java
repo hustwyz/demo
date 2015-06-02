@@ -45,7 +45,7 @@ private List<student> student_list;
             }
         }
     };
-
+//
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
        View  view= inflater.inflate(R.layout.fragment2, container, false);
         listView2= (PullToRefreshListView) view.findViewById(R.id.listview2);
@@ -54,6 +54,7 @@ private List<student> student_list;
         init(view);
        return   view;
     }
+    //-----------------------------------------------
  private   void  init(View view)
  {
      listView2.setMode(PullToRefreshBase.Mode.BOTH);
