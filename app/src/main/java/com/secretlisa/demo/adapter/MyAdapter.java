@@ -1,12 +1,14 @@
 package com.secretlisa.demo.adapter;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.secretlisa.demo.LoadBitmap;
 import com.secretlisa.demo.R;
 
 import com.secretlisa.demo.bean.student;
@@ -44,14 +46,15 @@ public class MyAdapter extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder   holder;
+        ViewHolder   holder=null;
         if(convertView==null)
         {
+
+            convertView= LayoutInflater.from(context).inflate(R.layout.item,parent,false);
             holder=new ViewHolder();
-            convertView.inflate(context, R.layout.item,null);
-         //   holder.iv= (ImageView) convertView.findViewById(R.id.item_image);
+            holder.iv= (ImageView) convertView.findViewById(R.id.item_image);
             holder.tv1= (TextView) convertView.findViewById(R.id.tv1);
-            holder.tv1=(TextView)convertView.findViewById(R.id.tv2);
+            holder.tv2=(TextView)convertView.findViewById(R.id.tv2);
             convertView.setTag(holder);
 
 
@@ -59,16 +62,18 @@ public class MyAdapter extends BaseAdapter{
         else {
              holder= (ViewHolder) convertView.getTag();
         }
-                            student   stu=list.get(position);
+           student   stu=list.get(position);
              holder.tv1.setText(stu.getName());
-            holder.tv2.setText(stu.getIntro());
+             holder.tv2.setText(stu.getIntro());
+
+        LoadBitmap.getBitmap(stu.getIco(),holder.iv,context);
 
 
 
         return convertView;
     }
     class ViewHolder{
-     //   ImageView  iv;
+        ImageView  iv;
         TextView   tv1;
         TextView   tv2;
 

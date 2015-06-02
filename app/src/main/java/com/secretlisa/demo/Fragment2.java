@@ -29,12 +29,13 @@ private List<student> student_list;
  private  student   student;
  private  String   url="http://api.secretlisa.com/app/rec_apps?app=com.secretlisa.xueba";
 
-    private   Handler  hander=new Handler()
+    private   Handler  handler=new Handler()
     {
         @Override
         public void handleMessage(Message msg) {
             if (msg.what==1)
-            { listView2.setAdapter(new MyAdapter(getActivity(),student_list));
+            {
+                listView2.setAdapter(new MyAdapter(getActivity(),student_list));
 
             }
         }
@@ -53,10 +54,10 @@ private List<student> student_list;
         HttpUtils   utils=new HttpUtils();
         utils.send(HttpRequest.HttpMethod.GET, url, new RequestCallBack<String>() {
             @Override
-            public void onSuccess(ResponseInfo<String> responseInfo) {
+            public void onSuccess(ResponseInfo<String> objectResponseInfo) {
                 student_list=new ArrayList<student>();
                 try {
-                    JSONObject  obj1=new JSONObject(responseInfo.result);
+                    JSONObject  obj1=new JSONObject(objectResponseInfo.result);
                     JSONArray arr=obj1.getJSONArray("data");
                     for(int i=0;i<arr.length();i++)
                     {
@@ -67,8 +68,8 @@ private List<student> student_list;
                         student.setIco(obj3.getString("icon"));
                         student_list.add(student);
                     }
-                    System.out.print("----------------------------------------------------------------------"+student_list);
-                      hander.sendEmptyMessage(1);
+                    System.out.print("----------------------------------------------------------------------"+student_list.toString());
+                      handler.sendEmptyMessage(1);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
