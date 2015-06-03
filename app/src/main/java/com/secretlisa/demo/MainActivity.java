@@ -22,7 +22,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private List<Fragment> contentFragments;
     private List<Boolean> imageViewIsChoseList;
     private List<ImageView> imageViewList;
-//----------------------------------------------
+
 //    @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
