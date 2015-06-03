@@ -49,6 +49,7 @@ private List<student> student_list;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
        View  view= inflater.inflate(R.layout.fragment2, container, false);
         listView2= (PullToRefreshListView) view.findViewById(R.id.listview2);
+
         Log.e("ddd", "-----------------------------------------");
         getInfo();
         init(view);
@@ -69,7 +70,10 @@ private List<student> student_list;
          @Override
          public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
            Toast.makeText(getActivity(),"下拉加载",Toast.LENGTH_SHORT).show();
+            if(MyAdapter.index<3)
+            {
              MyAdapter.index++;
+            }
              new Thread(){
                  @Override
                  public void run() {
@@ -82,7 +86,6 @@ private List<student> student_list;
              }.start();
              adapter.notifyDataSetChanged();
              listView2.onRefreshComplete();
-
          }
      });
 

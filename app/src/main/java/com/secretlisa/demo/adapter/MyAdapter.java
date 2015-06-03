@@ -63,7 +63,7 @@ public class MyAdapter extends BaseAdapter{
         else {
              holder= (ViewHolder) convertView.getTag();
         }
-           student   stu=list.get(position);
+          student   stu=list.get(position);
              holder.tv1.setText(stu.getName());
              holder.tv2.setText(stu.getIntro());
 

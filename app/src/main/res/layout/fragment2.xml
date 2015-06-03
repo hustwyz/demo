@@ -10,7 +10,7 @@
       android:id="@+id/listview2"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:divider="#ff0000"
+      android:divider="#fffff9f2"
       android:dividerHeight="3px"
       android:footerDividersEnabled="true"
       android:headerDividersEnabled="true"
