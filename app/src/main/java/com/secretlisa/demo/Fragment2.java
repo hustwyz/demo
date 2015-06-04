@@ -27,7 +27,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Fragment2 extends   Fragment {
-private PullToRefreshListView listView2;
+private PullToRefreshListView pullToRefreshListView;
+    private  ListView   listView2;
 private List<student> student_list;
  private  student   student;
    private   MyAdapter  adapter;
@@ -48,7 +49,8 @@ private List<student> student_list;
 //
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
        View  view= inflater.inflate(R.layout.fragment2, container, false);
-        listView2= (PullToRefreshListView) view.findViewById(R.id.listview2);
+        pullToRefreshListView= (PullToRefreshListView) view.findViewById(R.id.listview2);
+        listView2 =pullToRefreshListView.getRefreshableView();
 
         Log.e("ddd", "-----------------------------------------");
         getInfo();
@@ -58,13 +60,15 @@ private List<student> student_list;
     //-----------------------------------------------
  private   void  init(View view)
  {
-     listView2.setMode(PullToRefreshBase.Mode.BOTH);
-     listView2.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
+     pullToRefreshListView.setMode(PullToRefreshBase.Mode.BOTH);
+    // pullToRefreshListView.setPullToRefreshOverScrollEnabled(false);
+     //pullToRefreshListView.setScrollingWhileRefreshingEnabled(true);
+     pullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
          @Override
          public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
              Toast.makeText(getActivity(),"上啦刷新",Toast.LENGTH_SHORT).show();
            //  adapter.notifyDataSetChanged();
-             listView2.onRefreshComplete();
+             pullToRefreshListView.onRefreshComplete();
          }
 
          @Override
@@ -85,7 +89,7 @@ private List<student> student_list;
                  }
              }.start();
              adapter.notifyDataSetChanged();
-             listView2.onRefreshComplete();
+             pullToRefreshListView.onRefreshComplete();
          }
      });
 

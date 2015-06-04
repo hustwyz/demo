@@ -51,6 +51,18 @@
         </receiver>
 
 
+        <activity
+            android:name=".DianleActivity"
+         >
+
+        </activity>
+
+        <activity
+            android:name=".DuomengActivity"
+          >
+
+        </activity>
+
 
     </application>
 
