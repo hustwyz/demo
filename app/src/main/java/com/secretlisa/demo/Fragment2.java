@@ -1,5 +1,6 @@
 package com.secretlisa.demo;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -27,8 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Fragment2 extends   Fragment {
-private PullToRefreshListView pullToRefreshListView;
-    private  ListView   listView2;
+private PullToRefreshListView listView2;
 private List<student> student_list;
  private  student   student;
    private   MyAdapter  adapter;
@@ -49,8 +49,8 @@ private List<student> student_list;
 //
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
        View  view= inflater.inflate(R.layout.fragment2, container, false);
-        pullToRefreshListView= (PullToRefreshListView) view.findViewById(R.id.listview2);
-        listView2 =pullToRefreshListView.getRefreshableView();
+        listView2= (PullToRefreshListView) view.findViewById(R.id.listview2);
+      //  listView2 =pullToRefreshListView.getRefreshableView();
 
         Log.e("ddd", "-----------------------------------------");
         getInfo();
@@ -60,15 +60,16 @@ private List<student> student_list;
     //-----------------------------------------------
  private   void  init(View view)
  {
-     pullToRefreshListView.setMode(PullToRefreshBase.Mode.BOTH);
-    // pullToRefreshListView.setPullToRefreshOverScrollEnabled(false);
+     listView2.setMode(PullToRefreshBase.Mode.BOTH);
+     // pullToRefreshListView.setPullToRefreshOverScrollEnabled(false);
      //pullToRefreshListView.setScrollingWhileRefreshingEnabled(true);
-     pullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
+     listView2.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
          @Override
          public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
              Toast.makeText(getActivity(),"上啦刷新",Toast.LENGTH_SHORT).show();
-           //  adapter.notifyDataSetChanged();
-             pullToRefreshListView.onRefreshComplete();
+             adapter.notifyDataSetChanged();
+              new FinishRefresh().execute();
+           //  listView2.onRefreshComplete();
          }
 
          @Override
@@ -89,15 +90,28 @@ private List<student> student_list;
                  }
              }.start();
              adapter.notifyDataSetChanged();
-             pullToRefreshListView.onRefreshComplete();
+            new FinishRefresh().execute();
+          //   listView2.onRefreshComplete();
          }
      });
-
 
 
  }
 
 
+
+    private  class   FinishRefresh   extends AsyncTask<Void,Void,Void>
+    {
+        @Override
+        protected Void doInBackground(Void... params) {
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            listView2.onRefreshComplete();
+        }
+    }
 
 
 
