@@ -2,13 +2,6 @@
 <items version="2" >
 
     <item
-        jar="D:\Github\demo\app\libs\xUtils-2.6.14.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
-        <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\xUtils-2.6.14-714cb5de067f02602ea50fcd192c6fa772e36b21.jar" />
-    </item>
-    <item
         jar="D:\Github\demo\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -16,11 +9,11 @@
         <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-b33bdeb6c574a4f59533fd1f4137bbb8d81abc4b.jar" />
     </item>
     <item
-        jar="D:\Github\demo\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
+        jar="D:\Github\demo\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\19.1.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\classes-73b2dcab0208a2a05bace46bdd592e76922d3313.jar" />
+        sha1="af4cc326e6cd92f88db12298767e521743aedd36">
+        <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\classes-dd29fb33078c28f40e544dbd0aa2eeef33241d6a.jar" />
     </item>
     <item
         jar="D:\Github\demo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
@@ -30,11 +23,39 @@
         <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\classes-0530711c5f8e26a7cb886a9a15cd7cac5bc25292.jar" />
     </item>
     <item
+        jar="D:\Github\demo\app\build\intermediates\exploded-aar\demo\pullToRefreshlibrary\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4f58104bd5433c300fb90a74e1be0fe328c22900">
+        <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\classes-8b890db1d38e1edc75bd3431af231b39a01ed469.jar" />
+    </item>
+    <item
+        jar="D:\Github\demo\app\libs\xUtils-2.6.14.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
+        <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\xUtils-2.6.14-714cb5de067f02602ea50fcd192c6fa772e36b21.jar" />
+    </item>
+    <item
+        jar="D:\Github\demo\app\libs\YoumiSdk_v5.1.0_2015-04-01.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="012e279c3575abba75905c7e25121cf207428e73">
+        <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\YoumiSdk_v5.1.0_2015-04-01-a3823bf80dcd30cd6a312956084ee43956135504.jar" />
+    </item>
+    <item
         jar="E:\adnroid-sdk-4.3-eclipse\adt-bundle-windows-x86-20130729\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
         <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-213d87afb8201c96d49e96ed54268e1a30b58167.jar" />
+    </item>
+    <item
+        jar="D:\Github\demo\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="D:\Github\demo\app\build\intermediates\pre-dexed\debug\classes-73b2dcab0208a2a05bace46bdd592e76922d3313.jar" />
     </item>
 
 </items>

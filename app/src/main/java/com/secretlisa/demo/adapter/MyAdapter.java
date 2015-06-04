@@ -21,6 +21,7 @@ import java.util.List;
 public class MyAdapter extends BaseAdapter{
     private List<student>  list;
     private Context context;
+    public   static  int   index=1;
 
 
 
@@ -31,7 +32,7 @@ public class MyAdapter extends BaseAdapter{
 
     @Override
     public int getCount() {
-        return list.size() ;
+        return 3*index ;
     }
 
     @Override
@@ -62,7 +63,7 @@ public class MyAdapter extends BaseAdapter{
         else {
              holder= (ViewHolder) convertView.getTag();
         }
-           student   stu=list.get(position);
+          student   stu=list.get(position);
              holder.tv1.setText(stu.getName());
              holder.tv2.setText(stu.getIntro());
 
