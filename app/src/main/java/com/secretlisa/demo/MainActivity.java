@@ -76,6 +76,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         contentFragments.add(fragment4);
 
         viewPager.setAdapter(new MyAdapter(getSupportFragmentManager(), contentFragments));
+
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageSelected(int arg0) {

@@ -1,5 +1,6 @@
 package com.secretlisa.demo;
 
+import android.accounts.AccountManager;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,7 +28,8 @@ public class DuomengActivity extends Activity  implements View.OnClickListener {
         setContentView(R.layout.duomengactivity);
         findViewById(R.id.open_offerwall).setOnClickListener(this);
         showPointTv= (TextView) findViewById(R.id.showPoints);
-        DAOW.getInstance(this).init("96ZJ2b8QzehB3wTAwQ", new SDKLoadListener() {
+
+ /*       DAOW.getInstance(this).init("96ZJ2b8QzehB3wTAwQ", new SDKLoadListener() {
             @Override
             public void onStart() {
                 Log.v(Tag,"积分初始化开始");
@@ -44,14 +46,41 @@ public class DuomengActivity extends Activity  implements View.OnClickListener {
             public void onLoading() {
               Log.v(Tag,"积分初始化中");
             }
+        });*/
+
+        DAOW.getInstance(this).init("96ZJ2b8QzehB3wTAwQ", new SDKLoadListener() {
+            @Override
+            public void onStart() {
+                Log.v("--", "积分初始化开始");
+            }
+
+            @Override
+            public void onSuccess() {
+                Log.v("--","积分初始化完成");
+            }
+
+            @Override
+            public void onFail() {
+                Log.v("--","积分墙初始化失败");
+            }
+
+            @Override
+            public void onLoading() {
+                Log.v("--","积分初始化中");
+            }
         });
 
-DAOW.getInstance(this).setOnCloseListener(new DCloseListener() {
+
+
+
+
+/*
+    DAOW.getInstance(this).setOnCloseListener(new DCloseListener() {
     @Override
-    public void onClose() {
+      public void onClose() {
         Toast.makeText(DuomengActivity.this,"积分墙退出",Toast.LENGTH_SHORT).show();
     }
-});
+});*/
           checkPoints();
 
     }

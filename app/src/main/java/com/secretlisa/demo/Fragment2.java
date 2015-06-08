@@ -66,7 +66,7 @@ private List<student> student_list;
      listView2.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
          @Override
          public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
-             Toast.makeText(getActivity(),"上啦刷新",Toast.LENGTH_SHORT).show();
+             Toast.makeText(getActivity(),"下拉刷新",Toast.LENGTH_SHORT).show();
              adapter.notifyDataSetChanged();
               new FinishRefresh().execute();
            //  listView2.onRefreshComplete();
@@ -74,7 +74,7 @@ private List<student> student_list;
 
          @Override
          public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
-           Toast.makeText(getActivity(),"下拉加载",Toast.LENGTH_SHORT).show();
+           Toast.makeText(getActivity(),"上拉加载",Toast.LENGTH_SHORT).show();
             if(MyAdapter.index<3)
             {
              MyAdapter.index++;

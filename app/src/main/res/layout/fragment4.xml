@@ -1,11 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="文本4"
+        android:id="@+id/relative_layout"
+        >
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment4_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_alignBottom="@+id/fragment4_viewpager"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView_first_fragment_1"
+                android:layout_width="10dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+
+                android:scaleType="fitXY"
+                android:src="@drawable/shape_oval_guide_default" />
+
+
+
+            <ImageView
+                android:id="@+id/imageView_first_fragment_3"
+                android:layout_width="10dp"
+                android:layout_height="70dp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/shape_oval_guide_default" />
+
+            <ImageView
+                android:id="@+id/imageView_first_fragment_4"
+                android:layout_width="10dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/shape_oval_guide_selected" />
+
+        </LinearLayout>
+
+</RelativeLayout>
+
+
+    <ListView
+        android:layout_below="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listview1"
         />
+
 </LinearLayout>
